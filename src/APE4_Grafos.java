@@ -42,7 +42,11 @@ public class APE4_Grafos {
         // ═══════════════════════════════════
         public void agregarNodo(String id, String nombre) {
 
-            // COMPLETE AQUÍ
+            // Crear y guardar el nodo
+            nodos.put(id, new Nodo(id, nombre));
+
+            // Inicializar su lista de vecinos vacía
+            adyacencia.put(id, new ArrayList<>());
 
 
         }
