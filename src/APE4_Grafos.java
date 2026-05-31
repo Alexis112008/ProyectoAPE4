@@ -81,59 +81,43 @@ public class APE4_Grafos {
             // Camino inicial
             List<String> caminoInicial = new ArrayList<>();
 
-            // TODO:
             // Agregar nodo inicio al camino inicial
+            caminoInicial.add(inicio);
 
-
-            // TODO:
             // Agregar caminoInicial a la cola
+            cola.add(caminoInicial);
 
-
-            // TODO:
             // Marcar inicio como visitado
-
+            visitados.add(inicio);
 
             while (!cola.isEmpty()) {
 
-                // TODO:
-                // Obtener el primer camino de la cola
+            // Obtener el primer camino de la cola
+            List<String> camino = cola.poll();
 
+            String actual = camino.get(camino.size() - 1);
 
-                // Nodo actual
-                String actual =
-                        camino.get(camino.size() - 1);
-
-                // Si llegamos al destino
-                if (actual.equals(fin)) {
-                    return camino;
-                }
-
-                // Recorrer vecinos
-                for (Arista arista : adyacencia.get(actual)) {
-
-                    // TODO:
-                    // Verificar si el vecino NO fue visitado
-
-
-                        // TODO:
-                        // Marcar vecino como visitado
-
-
-                        // Crear nuevo camino
-                        List<String> nuevoCamino =
-                                new ArrayList<>(camino);
-
-                        // TODO:
-                        // Agregar vecino al nuevo camino
-
-
-                        // TODO:
-                        // Agregar nuevoCamino a la cola
-
-                    }
-                }
+            if (actual.equals(fin)) {
+                return camino;
             }
 
+            for (Arista arista : adyacencia.get(actual)) {
+
+                // Verificar si el vecino NO fue visitado
+                if (!visitados.contains(arista.destino)) {
+
+                    // Marcar vecino como visitado
+                    visitados.add(arista.destino);
+
+                    List<String> nuevoCamino = new ArrayList<>(camino);
+
+                    // Agregar vecino al nuevo camino
+                    nuevoCamino.add(arista.destino);
+
+                    // Agregar nuevoCamino a la cola
+                    cola.add(nuevoCamino);
+                }
+            }
             return null;
         }
 
