@@ -111,6 +111,7 @@ Conecta dos nodos en ambos sentidos.
 Explora el grafo por niveles para encontrar la ruta con menos paradas.
 
 ![Código BFS](captura/codigo_bfs.png)
+![Código BFS](captura/codigo_bfs1.png)
 
 ---
 
@@ -119,6 +120,7 @@ Explora el grafo por niveles para encontrar la ruta con menos paradas.
 Calcula la ruta con la menor distancia total usando una cola de prioridad.
 
 ![Código Dijkstra](captura/codigo_dijkstra.png)
+![Código Dijkstra](captura/codigo_dijkstra1.png)
 
 ---
 
