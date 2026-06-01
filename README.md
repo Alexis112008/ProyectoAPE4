@@ -60,7 +60,12 @@ Proyecto_APE4/
 ├── captura/
 │   ├── ejecucion.png
 │   ├── bfs_resultado.png
-│   └── dijkstra_resultado.png
+│   ├── dijkstra_resultado.png
+│   ├── codigo_agregarNodo.png
+│   ├── codigo_agregarArista.png
+│   ├── codigo_bfs.png
+│   ├── codigo_dijkstra.png
+│   └── codigo_mostrarRuta.png
 └── README.md
 ```
 
@@ -79,6 +84,10 @@ static class Nodo {
 
 Almacena el identificador y nombre de cada ubicación.
 
+![Código Clase Nodo](captura/codigo_nodo.png)
+
+---
+
 ### Clase Arista
 
 ```java
@@ -89,6 +98,10 @@ static class Arista {
 ```
 
 Representa una conexión con su distancia.
+
+![Código Clase Arista](captura/codigo_arista.png)
+
+---
 
 ### agregarNodo()
 
@@ -101,6 +114,10 @@ public void agregarNodo(String id, String nombre) {
 
 Crea un nodo y lo guarda en el grafo.
 
+![Código agregarNodo](captura/codigo_agregarNodo.png)
+
+---
+
 ### agregarArista()
 
 ```java
@@ -111,6 +128,10 @@ public void agregarArista(String origen, String destino, int peso) {
 ```
 
 Conecta dos nodos en ambos sentidos.
+
+![Código agregarArista](captura/codigo_agregarArista.png)
+
+---
 
 ### BFS
 
@@ -145,6 +166,10 @@ public List<String> bfs(String inicio, String fin) {
 ```
 
 Explora el grafo por niveles para encontrar la ruta con menos paradas.
+
+![Código BFS](captura/codigo_bfs.png)
+
+---
 
 ### Dijkstra
 
@@ -186,6 +211,10 @@ public List<String> dijkstra(String inicio, String fin) {
 
 Calcula la ruta con la menor distancia total usando una cola de prioridad.
 
+![Código Dijkstra](captura/codigo_dijkstra.png)
+
+---
+
 ### mostrarRuta()
 
 ```java
@@ -208,6 +237,8 @@ public void mostrarRuta(List<String> ruta) {
 
 Imprime la ruta en formato legible.
 
+![Código mostrarRuta](captura/codigo_mostrarRuta.png)
+
 ---
 
 ## 🖥️ Compilación y Ejecución
@@ -227,21 +258,19 @@ Universidad (uta) -> Comedor (comedor) -> Estadio (estadio)
 Universidad (uta) -> FISEI (fisei) -> Idiomas (idiomas) -> Biblioteca (biblioteca) -> Estadio (estadio)
 ```
 
+![Ejecución del programa](captura/ejecucion.png)
+
 ---
 
-## 📸 Capturas
-
-### Ejecución del programa
-
-![Ejecución](captura/ejecucion.png)
+## 📸 Capturas de Resultados
 
 ### Resultado BFS
 
-![BFS](captura/bfs_resultado.png)
+![Resultado BFS](captura/bfs_resultado.png)
 
 ### Resultado Dijkstra
 
-![Dijkstra](captura/dijkstra_resultado.png)
+![Resultado Dijkstra](captura/dijkstra_resultado.png)
 
 ---
 
